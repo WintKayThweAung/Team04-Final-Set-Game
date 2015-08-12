@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="libs/js/handlebars-v3.0.3.js"></script>
+        <script src="libs/js/jquery-2.1.4.min.js"></script>
+        <script src="libs/js/jquery.mobile-1.4.5.js"></script>
+        <script src="constant.js"></script>
+        <script src="setgame.js"></script>
+        <script id="allgameTemplate" type="text/x-handlebars-template" >
+            <div>
+            <li data-gameid="{{ GameId }}">
+                <a>
+                    <h2>Game ID: {{ GameId }}</h2>
+                    <p>Description: {{ Description }}</p>
+                </a>
+            </li>
+            <div>
+        </script> 
+        <script>
+        function GoGame(gameId)
+        {
+            alert(gameId);
+        }
+        </script>
+        
+        <link rel="stylesheet" href="libs/css/jquery.mobile-1.4.5.css"/>
+        <link rel="stylesheet" href="libs/css/setgame.css"/>
+    </head>
+    <body>
+        
+    <!--signinup Page-->
+    <div id="signinup" data-role="page">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h3>Set Game</h3>
+        </div>
+            <div role="main" class="ui-content">
+                <div class="ui-field-contain">
+                    <h2 class="mc-text-center">Welcome!</h2>
+                    <p class="mc-top-margin-1-5"><b>Existing Users</b></p>
+                    <a id="signinBtn" class="ui-btn ui-btn-b ui-corner-all">Sign In</a>
+                    <p class="mc-top-margin-1-5"><b>Don't have an account?</b></p>
+                    <a id="signupBtn" class="ui-btn ui-btn-b ui-corner-all">Sign Up</a>
+                </div>
+            </div>
+    </div>
+    
+    <!--login Page-->
+    <div id="login" data-role="page">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h3>Set Game</h3>
+        </div>
+            <div role="main" class="ui-content">
+                <div class="ui-field-contain">
+                    <label for="accName">Username</label>
+                    <input type="text" name id="accName">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="password">Password</label>
+                    <input type="password" name id="password">
+                </div>
+                    
+                        
+                    <div id="message" class="ui-field-contain"></div>
+                    <a id="loginBtn" class="ui-btn ui-btn-b ui-corner-all">Login</a>
+                    </div>
+            </div>
+    
+    
+    <!--createnew Page-->  
+    <div id="createnew" data-role="page">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h3>Set Game</h3>
+        </div>
+        <div role="main" class="ui-content">
+            <div class="ui-field-contain">
+                <h2 class="mc-text-center">Sign Up!</h2>
+                <label for="accName">Username</label>
+            <input type="text" name id="accNameForSignUp">
+            </div>
+            <div class="ui-field-contain">
+                <label for="password">Password</label>
+                <input type="password" name id="passwordForSignUp">
+            </div>
+            <div class="ui-field-contain">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" name id="confirmpassword">
+            </div>
+             <div class="ui-field-contain">
+                <div id="signupmessage"></div>
+             </div>   
+                <a id="accsignUpBtn" class="ui-btn ui-btn-b ui-corner-all">Submit</a>
+        </div>
+    </div>
+      
+    <!--gamelist Page-->
+    <div id="gamelist" data-role="page">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h3>Set Game</h3>
+        </div>
+      
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-inset="true" id="game_list" style="margin:0;"></ul>
+        </div>
+    </div>
+        
+    <!--playgames Page-->
+    <div id="game" data-role="page">
+        <div data-role="header" data-position="fixed" data-theme="e">
+            <h3>Set Game</h3>
+
+            <div id="gameIdShow"> </div>
+        <div role="main" class="ui-content">
+ 
+            <div class="ui-grid-b">
+            <div class="ui-block-a" style="height:100%;padding:36px 0px" id=0><a href="#" style="padding:23px 45px;" onclick="ClickMe('0')">0</a></div>
+            <div class="ui-block-b" style="height:100%;padding:38px 0px;" id=1><a href="#" style="padding:23px 45px;" onclick="ClickMe('1')">1</a></div>
+            <div class="ui-block-c" style="height:100%;padding:38px 0px;" id=2><a href="#" style="padding:23px 45px;" onclick="ClickMe('2')">2</a></div>
+            </div>
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="height:100%;padding:38px 0px;" id=3><a href="#" style="padding:23px 45px;" onclick="ClickMe('3')">3</a></div>
+            <div class="ui-block-b" style="height:100%;padding:38px 0px;" id=4><a href="#" style="padding:23px 45px;" onclick="ClickMe('4')">4</a></div>
+            <div class="ui-block-c" style="height:100%;padding:38px 0px;" id=5><a href="#" style="padding:23px 45px;" onclick="ClickMe('5')">5</a></div>
+        </div>
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="height:100%;padding:38px 0px;" id=6><a href="#" style="padding:23px 45px;" onclick="ClickMe('6')">6</a></div>
+            <div class="ui-block-b" style="height:100%;padding:38px 0px;" id=7><a href="#" style="padding:23px 45px;" onclick="ClickMe('7')">7</a></div>
+            <div class="ui-block-c" style="height:100%;padding:38px 0px;" id=8><a href="#" style="padding:23px 45px;" onclick="ClickMe('8')">8</a></div>
+        </div>
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="height:100%;padding:38px 0px;" id=9><a href="#" style="padding:23px 45px;" onclick="ClickMe('9')">9</a></div>
+            <div class="ui-block-b" style="height:100%;padding:38px 0px;" id=10><a href="#" style="padding:23px 45px;" onclick="ClickMe('10')">10</a></div>
+            <div class="ui-block-c" style="height:100%;padding:38px 0px;" id=11><a href="#" style="padding:23px 45px;" onclick="ClickMe('11')">11</a></div>
+        </div>
+        <div style="padding-left:35px;padding-right:35px; padding-top:10px;">
+      
+            <a class="ui-btn" style="float:left" id="clearBtn">&nbsp;Clear&nbsp; </a>
+            <a class="ui-btn" style="float:right" id="gameSubmit">Submit</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>

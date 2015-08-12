@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Set Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="libs/css/newcss.css"/>
+
+        <script src="libs/js/jquery-2.1.4.js"></script>     
+        <script type="text/javascript" src="libs/js/handlebars-v3.0.3.js"></script>
+        <script type="text/javascript" src="newregistration.js"></script>
+
+        <script id="allgameTemplate" type="text/x-handlebars">
+            <ul class="mylist">
+            <li>Game ID:<a data-game="" id="{{gameid}}" href="display.html" onclick=allGameSelect({{gameid}})>{{gameid}}</a></li>
+            <li>Description:{{description}}</li>
+            </ul>
+
+        </script>
+
+
+    </head>
+    <body onload="allGameList()">
+        <div class="header">
+            <img src="libs/images/logo.png"/>
+        </div>
+        <div class="container main" id="allgamelist">
+
+
+        </div>
+
+    </body>
+</html>

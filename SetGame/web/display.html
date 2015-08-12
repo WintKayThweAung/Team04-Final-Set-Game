@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Set Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="libs/css/newcss.css"/>
+        <script src="libs/js/jquery-2.1.4.js"></script>     
+        <script type="text/javascript" src="libs/js/handlebars-v3.0.3.js"></script>
+        <script src="constant.js"></script>
+        <script src="card.js"></script>
+        <script src="message.js"></script>
+
+        <script id="cardTemplate" type="text/x-handlerbars" >
+            <div data-card-name="{{position}}">
+            <div>
+            <img src="libs/images/{{position}}" alt="" /> 
+            </div>                               
+            </div>
+        </script>
+        <script id="newcardTemplate" type="text/x-handlerbars" >
+
+            <div id={{newid}}>
+            <div data-card-name="{{newposition}}">
+            <img src="libs/images/{{newposition}}" alt="" /> 
+            </div>                               
+            </div>
+        </script>
+
+    </head>
+    <body>
+        <div class="header">
+            <img src="libs/images/logo.png"/>
+        </div>
+        <div class="container">
+
+            <div class="left_col"> 
+                <span class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Game ID : </span><input type="text" id="gameid" class="title_input" readonly>
+                <br>
+
+                <input type="text" id="card1">
+                <input type="text" id="card2">
+                <input type="text" id="card3">
+                <button id="Btnsubmit">Submit</button>
+                <br>
+                <div id="img_col">
+                    <div id="0">
+
+
+                    </div>
+
+                    <div id="1">
+
+
+                    </div>
+
+                    <div id="2">
+
+
+
+                    </div>
+
+
+                    <div id="3">
+
+
+                    </div>
+
+                    <div id="4">
+
+
+                    </div>
+
+                    <div id="5">
+
+
+
+                    </div>
+
+
+                    <div id="6">
+
+
+                    </div>
+
+                    <div id="7">
+
+
+                    </div>
+
+                    <div id="8">
+
+
+
+                    </div>
+
+
+                    <div id="9">
+
+
+                    </div>
+
+                    <div id="10">
+
+
+                    </div>
+
+                    <div id="11">
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="right_col" id="correct_img">
+
+            </div>                       
+
+        </div>
+
+
+    </body>
+</html>
